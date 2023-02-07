@@ -1,0 +1,54 @@
+button{
+  margin-right: 8px;
+  position:fixed;
+  top: 550px;
+  left: 1150px;
+  width: 140px;
+  height: 40px;
+  background-color: #d19b06;
+  color: #fff;
+  border: black;
+  text-transform: uppercase;
+}
+body{
+  
+    background-size:cover;
+    background-position:center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-image: url("../../../images/firstpage.jpg");
+    min-height: 100vh; //responsive page
+  }
+  
+.st{
+  padding-top:20% ;
+  text-align: center ;
+  text-transform: uppercase;
+  font-size: 8rem;
+  font-family: BenguiatBold;
+  font-weight: 800;
+  color:#2117af;
+  letter-spacing: -2px;
+  animation: popShadow 5s infinite;
+  }
+  @keyframes popShadow{
+  
+    0%{
+      text-shadow: 0 0 0 black;
+    }
+    50%{
+      text-shadow: -0.05rem -0.05rem 1px #abed12,
+                  0.05rem -0.05rem 1px #abed12,
+                  -0.05rem 0.05rem 1px #abed12,
+                  0.05rem 0.05rem 1px #abed12,
+                  0 0 15px #008800d2,
+                  0 0 20px #008800d2;
+    }
+    100%{
+      text-shadow: 0 0 0 black;
+    }
+    }
+  
+  .st-bottom{
+    margin-top: 2%;
+  }

@@ -1,0 +1,32 @@
+body{
+    margin-top: -23%;
+    background-size:cover;
+    background-position:center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-image: url("../../../images/campo.jpg");
+    min-height: 150vh; //responsive page
+}
+.risultati{
+    margin-left: 0.2%;
+    background-color: rgba(23, 114, 53, 0.425);
+}
+.classifica{
+    margin-left: 0.2%;
+    background-color: rgba(23, 114, 53, 0.425);
+}
+.marcatori{
+    margin-left: 0.2%;
+    border: 5px;
+    background-color: rgba(23, 114, 53, 0.425);
+    color: wheat;
+    object-fit:contain;
+    max-height:100%;
+}
+p{
+    font-size: 24px;
+    color:white;
+    text-indent: 5%;
+    font-style: oblique ;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

@@ -1,0 +1,69 @@
+
+.football-post {
+  width: 50%; 
+  margin: 5px 20px;
+  padding: 20px 10px;
+  background-color: rgba(37, 36, 36, 0.644);;
+  border-radius: 10px; 
+  margin-left: 23%;
+}
+.football-post:hover {
+  box-shadow: 0 8px 16px 0 rgba(9, 245, 9, 0.767);
+}
+.football-post h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-align: center; 
+  text-transform: uppercase;
+  color:white;
+  }
+
+.football-post p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: white;
+  overflow: auto;
+  word-wrap: break-word;
+}
+
+.container-risposte{
+  display:flex;
+  align-items: center;
+}
+.risposte{
+  flex-basis: 40%;
+}
+
+.response-button {
+  text-align: center;
+  margin-top: -5.2%;
+}
+
+.remove-button {
+  text-align: center;
+ margin-left: 2%;
+}
+
+button[mat-flat-button] {
+  background-color: #d19b06da;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 2px 20px;
+  text-transform: uppercase;
+  display:inline-block;
+  margin-left: 60%;
+}
+
+button[mat-flat-button]:hover {
+  background-color: #bd9207ec;
+  cursor: pointer;
+  
+}
+.mostrapost{
+  color:white;
+}
+

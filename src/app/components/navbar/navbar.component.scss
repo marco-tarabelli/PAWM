@@ -1,0 +1,93 @@
+
+ul {
+    list-style-type: none;
+    margin-top: 5%;
+    overflow: hidden;
+    background-color:transparent;
+    position: center;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: #dfe6ec;
+    text-align: center;
+    padding: 20px 80px 20px;
+    text-decoration: none;
+    font: small-caps 18px Verdana;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: rgba(21, 226, 158, 0.425);
+  }
+  
+  .active {
+    background-color: #04AA6D;
+  }
+.welcome-message{
+  display: block;
+  color:#ebedf1;
+  text-align: center;
+  padding: 20px 80px 20px;
+  text-decoration: none;
+  font: small-caps 15px Verdana;
+}
+.logout-link{
+  position:static;
+  cursor: pointer;
+  top: 7px;
+  right: 29px;
+}
+
+.st{
+padding-top:5% ;
+text-align: center ;
+text-transform: uppercase;
+font-size: 8rem;
+font-family: BenguiatBold;
+font-weight: 800;
+color:#2117af;
+letter-spacing: -2px;
+animation: popShadow 5s infinite;
+}
+@keyframes popShadow{
+
+  0%{
+    text-shadow: 0 0 0 black;
+  }
+  50%{
+    text-shadow: -0.05rem -0.05rem 1px #abed12,
+                0.05rem -0.05rem 1px #abed12,
+                -0.05rem 0.05rem 1px #abed12,
+                0.05rem 0.05rem 1px #abed12,
+                0 0 15px #008800d2,
+                0 0 20px #008800d2;
+  }
+  100%{
+    text-shadow: 0 0 0 black;
+  }
+  }
+
+.st-bottom{
+  margin-top: 2%;
+}
+  
+ body{
+  background-image: url("../../../images/campo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+ 
+    
+}
+
+button{
+  position:static;
+  margin-left: 80%;
+}
+

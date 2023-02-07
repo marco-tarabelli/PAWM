@@ -1,0 +1,56 @@
+
+<body>
+  <div class="titolo" (click)="backHome()">
+    <div class="st">
+      <div class="st-top">
+        <div class="sf-b- sf-b--full"></div>
+                      <div (click)="backHome()">
+                        <span class="st-drop sf--f">F</span>
+                        <span class="sf--o">o</span>
+                        <span class="sf--o">o</span>
+                        <span class="sf--t">t</span>
+                        <span class="sf--b">b</span>
+                        <span class="sf--a">a</span>
+                        <span class="sf--l">l</span>
+                        <span class="st-drop sf--l-2">l</span>
+                      </div>
+        <div class="sf-b- sf-b--mini sf-b--left"></div>
+        <div class="sf-b- sf-b--mini sf-b--right"></div>
+      </div>
+
+      <div class="st-bottom">
+        <p>
+          <span class="st-things-h">H</span>
+          <span class="st-things-o">o</span>
+          <span class="st-things-u">u</span>
+          <span class="st-things-s">s</span>
+          <span class="st-things-e">e</span>
+        </p>
+      </div>
+  
+    </div>
+  </div>
+
+ 
+
+
+  
+<ul>
+    <li class="post"><a href='/app-homepage'>Post</a></li>
+    <li class="contact"><a href='/app-contact'>Contact</a></li>
+    <li class="stats"><a href='/app-statistiche'>Stats</a></li>
+    <li class="login"><a href='/app-login-form'>Login</a></li>
+    <li class="register"><a href='/app-registration-form'>Register</a></li>
+    <div class="logged-user" [style.display]="isLogged ? 'block' : 'none'"></div>
+    <div class="welcome-message">Benvenuto {{nome_utente}}</div>
+      
+    <div [style.display]="isLogged ? 'block' : 'none'">
+      <button class="button-logout" style="color:white" mat-button class="logout-link" (click)="logout()">
+          <mat-icon>power_settings_new</mat-icon>
+          <label>Logout</label>
+      </button>  
+    </div>
+    
+  </ul>
+</body>
+

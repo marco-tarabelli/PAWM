@@ -1,0 +1,68 @@
+  .new-response-form{
+    position:static;
+    margin-left:20%;
+    margin-top: 2%;
+    width: 140px;
+    height: 40px;
+    
+  }
+
+  .response-field {
+    width: 360%;
+    background-color: #faf0e6;
+    padding: 20px 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(223, 189, 39);
+  }
+
+  .pubblica-risposta-button button{
+    background-color: #d19b06da;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 2px 20px;
+    text-transform: uppercase;
+    margin-top: 12%;
+    margin-left: 20%;
+  }
+  button[mat-flat-button]:hover {
+    background-color: #bd9207ec;
+    cursor: pointer;
+  }
+  .resume-post{
+    max-width: 700px;
+    word-wrap: break-word;
+    margin-left: 20%;
+
+    padding: 20px 10px;
+    color: black;
+    background-color: #faf0e6;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgb(223, 189, 39);
+  }
+  mat-card-title{
+    text-transform: uppercase;
+    
+  }
+  mat-card-subtitle{
+    text-transform: uppercase;
+    color: black;
+    font-size: 17pt;
+  }
+
+  mat-label{
+    color: black;
+  }
+
+textarea{
+  color: black;
+  background-color: #faf0e6;
+}
+body{
+    background-size:cover;
+    background-position:center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-image: url("../../../images/campo.jpg");
+}

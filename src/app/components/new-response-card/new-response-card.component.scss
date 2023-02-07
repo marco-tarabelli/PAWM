@@ -1,0 +1,24 @@
+
+  .new-response-card {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    
+  }
+  
+  .new-response-card mat-card-subtitle {
+    font-size: 18px;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold; 
+    color: #333;
+  }
+  
+  .new-response-card mat-card-content {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 0%x;
+    color: #555;
+  }

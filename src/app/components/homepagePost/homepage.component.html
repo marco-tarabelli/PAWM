@@ -1,0 +1,30 @@
+<app-navbar></app-navbar>
+<body>
+        <div class="corpo">
+                <div class="new-post-button-container">
+                    
+
+                    <div class="new-post-button">
+                        <button mat-flat-button class="button"  (click)="openNewPostForm()" [style.display]="isLogged ? 'block' : 'none'">
+                            <label>Nuovo Post</label>
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="filtri-ricerca">
+                        <input class="filtri-input"type="text" placeholder="Cerca post per squadra" matInput [(ngModel)]="filtroSquadra" #squadra="ngModel" required/>
+                            <button class="filtro-squadra" mat-fab (click)="filterON()">
+                                <mat-icon class="search-icon">search icon</mat-icon>
+                            </button>
+                </div>
+                <div class="container-post">
+                    <div class="post" *ngFor="let post of posts.slice().reverse()">
+                        <app-new-post-card class="responese-post" [post]="post"></app-new-post-card>
+                    </div>
+                </div>
+
+             <br>
+        </div>
+
+</body>

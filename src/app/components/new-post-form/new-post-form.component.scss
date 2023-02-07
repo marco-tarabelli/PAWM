@@ -1,0 +1,72 @@
+
+p {
+  font-size: 24px;
+  color:white;
+  text-transform: uppercase;
+}
+
+input{
+  background-color: transparent;
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+.new-post-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px ;
+}
+
+.pubblica-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+button {
+  background-color: #d19b06;
+  color: #fff;
+  border: black;
+  text-transform: uppercase;
+}
+
+.dropdown-team select{
+  margin: 5px 40px;
+ padding: 10px 150px;
+  background-color: #e3e9e6e5;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(146, 255, 73);
+}
+
+
+mat-form-field{  
+  width: 60%; 
+  margin: 5px 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(146, 255, 73);
+  color: #000;
+}
+
+::ng-deep .mat-form-field {
+  border-radius: 4px;
+  padding: 0.75em 0.75em 0 0.75em;
+  color: #000;
+  background-color: #e3e9e6e5;
+  text-align: center;
+  
+}
+
+textarea{
+  width: 60%;
+}
+
+
+  body{
+    background-size:cover;
+    background-position:center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-image: url("../../../images/campo.jpg");
+    min-height: 100vh; //responsive page
+  }

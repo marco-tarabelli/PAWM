@@ -1,0 +1,40 @@
+<body>
+  <div class="new-post-form">
+<br>
+    <p>Squadra</p>
+<div class="dropdown-team">
+  <select [(ngModel)]="selectedTeam" (ngModelChange)="model.squadra_post = selectedTeam">
+    <option value="" class="mainselect">Select your favorite Team</option>
+    <option *ngFor="let team of teams" class="select">{{team}}</option>
+</select>
+  <mat-error *ngIf="model.squadra_post===''">Campo Obbligatorio</mat-error>
+</div>
+<br>
+    <p>Titolo</p>
+    <mat-form-field class="title-field" appearance="standard">
+      <mat-label style="color:black" >Inserisci qui...</mat-label>
+      <input matInput maxlength="150" [(ngModel)]="model.titolo_post" #titolo="ngModel" required>
+      <mat-error *ngIf="titolo.errors?.['required'] && titolo.touched">Campo Obbligatorio</mat-error>
+      <mat-hint *ngIf="titolo.touched && titolo.value.length == 150">Hai raggiunto il massimo di 150 caratteri</mat-hint>
+    </mat-form-field>
+<br>
+    <p>Post</p>
+    <mat-form-field class="post-field" appearance="standard">
+      <mat-label style="color:black">Inserisci qui... </mat-label>
+      <textarea matInput
+                maxlength="2500"
+                [(ngModel)]="model.contenuto_post"
+                #contenuto="ngModel" required
+                cdkTextareaAutosize
+                #autosize="cdkTextareaAutosize"
+                cdkAutosizeMinRows="5"
+                cdkAutosizeMaxRows="7"></textarea>
+      <mat-error *ngIf="contenuto.errors?.['required'] && contenuto.touched">Campo Obbligatorio</mat-error>
+      <mat-hint *ngIf="contenuto.touched && contenuto.value.length == 2500">Hai raggiunto il massimo di 2500 caratteri</mat-hint>
+    </mat-form-field>
+
+  </div>
+  <div class="pubblica-button">
+    <button mat-flat-button  [disabled]="model.squadra_post === '' || titolo.errors?.['required'] || contenuto.errors?.['required']" (click)="pubblica()">Pubblica</button>
+  </div>
+</body>

@@ -1,0 +1,36 @@
+
+
+<div class="football-post" >
+  <h2  >{{post.titolo_post}}</h2>
+  <h2>--  {{post.squadra_post}}  --</h2>
+  <p>{{post.contenuto_post}}</p>
+  
+  <div class="remove-button"  >
+    <button mat-flat-button class="button" role="button" (click)="removePost()">Rimuovi</button>
+  </div>
+
+  <div class="response-button">
+    <button mat-flat-button class="button" role="button" (click)="openNewResponseForm()" [style.display]="canAnswer ? 'block' : 'none'">Rispondi</button>
+  </div>
+<br>
+ <div class="post-creator">
+  <p>-Utente: {{post.nome_utente}}</p>
+</div> 
+
+  <div class="mostra-risposte">
+    <u class="mostrapost"(click)="this.mostraRisposte = !this.mostraRisposte" [style.display]="numRisposte != 0 ? 'block' : 'none'">Mostra Risposte ({{numRisposte}})</u>
+    <u class="mostrapost" [style.display]="numRisposte == 0 ? 'block' : 'none'" >Non ci sono risposte</u>
+  </div>
+ 
+  <div *ngIf="mostraRisposte">
+    <div *ngFor="let risposta of risposte">
+    <div class="container-risposte">
+      <app-new-response-card [risposta]="risposta" class="risposte"></app-new-response-card>
+    </div>
+    </div>
+  </div>
+
+</div>
+
+
+

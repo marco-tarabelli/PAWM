@@ -1,0 +1,47 @@
+<app-navbar></app-navbar>
+<body >
+  <form>
+
+    <h3>Login Here</h3>
+    <label class="nickname-field"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" matInput maxlength="45" #nome="ngModel"[(ngModel)]="model.nome_utente" [ngModelOptions]="{standalone: true}" required>
+    <mat-error *ngIf="nome.errors?.['required'] && nome.touched">E' richiesto un Nickname</mat-error>
+    <mat-hint *ngIf="nome.touched && nome.value.length == 45">Hai raggiunto il massimo di 45 caratteri</mat-hint>
+
+    <label class="password-field"><b>Password</b></label>
+    <input placeholder="Enter Password" matInput maxlength="16" type="password" id="idPassword" [(ngModel)]="model.password_utente" #password="ngModel" [ngModelOptions]="{standalone: true}" required>
+    <mat-error *ngIf="password.errors?.['required'] && password.touched">Password Obbligatoria</mat-error>
+    <mat-hint *ngIf="password.touched && password.value.length == 16">Hai raggiunto il massimo di 16 caratteri
+    </mat-hint>
+
+
+    <button (click)="login()" type="submit" [disabled]="nome.errors?.['required'] || password.errors?.['required'] " >
+      Login 
+    </button>
+
+  </form>
+</body>
+
+<app-footer></app-footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

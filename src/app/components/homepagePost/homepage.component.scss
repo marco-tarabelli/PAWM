@@ -1,0 +1,123 @@
+
+.new-post-button button{
+    position:fixed;
+    margin-left: 80%;
+    margin-top: 15%;
+    width: 140px;
+    height: 40px;
+    background-color: #d19b06;
+    color: #fff;
+    border: black;
+    text-transform: uppercase;
+}
+
+.accedi-link{
+    position:absolute;
+    cursor: pointer;
+    top: 206px;
+    right: 150px;
+}
+
+.registrati-link{
+    position:absolute;
+    cursor: pointer;
+    top: 206px;
+    right: 29px;
+}
+
+.welcome-message{
+    position:absolute;
+    top: 206px;
+    left: 30px;
+}
+
+.logout-link{
+    position:absolute;
+    cursor: pointer;
+    top: 206px;
+    right: 29px;
+}
+
+
+.filtro-squadra {
+    position: static;
+    margin-top: -1.5%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 16px;
+    background: transparent;
+    width: 50px;
+    height: 25px;
+    padding: 25px;
+    border: solid 3px #0b8912c1;
+    outline: none;
+    border-radius: 35px;
+    transition: all 0.5s;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 #5ad318;
+}
+.post{
+    margin-bottom: 2%;
+}
+.search-icon{
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    bottom: 14px; 
+}
+.welcome-message{
+    text-align: center; 
+    position:center;
+}
+.filtri-ricerca{
+    align-items: center;
+    display: flex;
+}
+.filtri-input{
+    position: static;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 16px;
+    margin-left: 55%;
+    background: transparent;
+    width: 150px;
+    padding: 25px;
+    border: solid 3px #0b8912c1;
+    outline: none;
+    border-radius: 35px;
+    transition: all 0.5s;
+    box-shadow:  0 6px 20px 0 #5ad318;
+}
+.filtri-input::placeholder{
+    color: #efefef;
+    opacity: 0;
+    transition: opacity 150ms ease-out;
+}
+.filtri-input:focus::placeholder{
+    opacity: 1;
+}
+
+.filtri-input:hover{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 #5ad318;
+}
+.filtri-input:focus,
+.filtri-input:not(:placeholder-shown){
+    width: 250px;
+    box-shadow:0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0#5ad318 ;
+}
+.response{
+    position: relative;
+    left: -27%;
+    top:70px;
+    margin-top: 1.5%;
+}
+.corpo{
+    margin-top: -23%;
+    background-size:cover;
+    background-position:center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-image: url("../../../images/campo.jpg");
+    min-height:  150vh; //responsive page
+}
+
+    

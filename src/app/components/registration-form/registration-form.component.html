@@ -1,0 +1,71 @@
+
+<app-navbar></app-navbar>
+<body>
+        <form>
+            <h3>Register Here</h3>
+
+                <div class="form-group col-5">
+                    <label class="nickname-field">
+                        Username
+                        <mat-error *ngIf="nome.errors?.['required'] && nome.touched">Campo Obbligatorio</mat-error>
+                    </label>
+                    <input  matInput maxlength="45"placeholder="Enter Username" [(ngModel)]="model.nome_utente" #nome="ngModel"[ngModelOptions]="{standalone: true}" required />
+                   
+                   
+                </div>
+
+                <br>
+                <label >
+                    Team
+                </label>
+                <div class="dropdown-team">
+                    <select  [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedTeam" (ngModelChange)="this.model.squadra_utente = this.selectedTeam">
+                        <option value="" class="mainselect">Select your favorite Team</option>
+                        <option *ngFor="let team of teams" class="select">{{team}}</option>
+                    </select>
+                      <mat-error *ngIf="model.squadra_utente==''">Campo Obbligatorio</mat-error>
+                </div>
+
+                <br><br>
+
+            <div class="form-group" >
+                <label class="email-field">
+                    Email
+                    <mat-error *ngIf="mail.errors?.['required'] && mail.touched">Campo Obbligatorio</mat-error>
+                </label>
+                <input matInput maxlength="320" type="email" placeholder="Enter email" [(ngModel)]="model.mail_utente" #mail="ngModel" required [email]="true" [ngModelOptions]="{standalone: true}">
+                <mat-hint *ngIf="mail.touched && mail.errors?.['email']">Formato mail non valido</mat-hint>
+            </div>
+                <br>
+            
+                <div class="form-group">
+                    <label>Password</label><br>
+                    <mat-label>Almeno 8 caratteri con lettere e numeri</mat-label>
+                    <input  maxlength="16" minlength="8"  [type]="mostra ? 'text' : 'password'" [(ngModel)]="model.password_utente" #password="ngModel" required [ngModelOptions]="{standalone: true}" >
+                    <mat-error *ngIf="password.errors?.['required'] && password.touched" >Campo Obbligatorio</mat-error>
+                    <mat-hint *ngIf="password.touched && password.value.length== 16">Hai raggiunto il massimo di 16 caratteri</mat-hint>
+                    <mat-hint *ngIf="password.touched && password.value.length < 8">Devi inserire almeno 8 caratteri</mat-hint>
+                </div>
+                <br>
+
+                <div class="form-group">
+                    <label>Confermna Password</label><br>
+                    <input  maxlength="16" minlength="8" [type]="mostra ? 'text' : 'password'" [(ngModel)]="model.conferma_password" #conferma="ngModel" required [ngModelOptions]="{standalone: true}" > 
+                    <mat-error *ngIf="conferma.errors?.['required'] && conferma.touched">Campo Obbligatorio</mat-error>
+                    <mat-hint *ngIf=" conferma.value != password.value">Le due password non coincidono</mat-hint>
+                </div>
+               
+                <br>
+           
+            <div class="checkbox-container" >
+                <input class="checkbox-input" type="checkbox"  (click)="mostraPassword()"  > 
+                <label class="checkbox-label">Mostra Password</label>
+            </div>
+            
+                <button color="primary"  (click)="registrazione()">Registrati</button>
+                <button class="btn btn-secondary" type="reset" (click)="backHome()">Cancel</button>
+        </form>
+</body>  
+
+<app-footer></app-footer>
+
